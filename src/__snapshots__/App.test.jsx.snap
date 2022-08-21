@@ -6,7 +6,7 @@ exports[`renders without crashing 1`] = `
 >
   <img
     alt="PalPay Logo"
-    className="h-24"
+    className="mx-auto flex h-[80%] w-[80%] justify-center"
     src="PalPay.png"
   />
   <h1>
@@ -26,13 +26,13 @@ exports[`renders without crashing 1`] = `
   </h3>
   <input
     aria-label="amount"
-    className="my-2 mx-16 rounded-full border px-2 text-center"
+    className="my-2 mx-auto justify-center rounded-full border py-1 px-2 text-center"
     id="amount"
     onChange={[Function]}
     value=""
   />
   <button
-    className="center mx-auto max-w-fit content-center items-center justify-center rounded-full bg-pink-400 px-2 text-center font-medium text-white"
+    className="center mx-auto max-w-fit content-center items-center justify-center rounded-full bg-pink-400 px-4 py-2 text-center font-bold text-white"
     onClick={[Function]}
     type="button"
   >

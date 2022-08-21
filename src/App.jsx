@@ -21,7 +21,11 @@ function App() {
 
   return (
     <div className="balance-box">
-      <img className="h-24" src={PalPayLogo} alt="PalPay Logo" />
+      <img
+        className="mx-auto flex h-[80%] w-[80%] justify-center"
+        src={PalPayLogo}
+        alt="PalPay Logo"
+      />
       <h1>Welcome to PalPay!</h1>
 
       <h2>Your balance is:</h2>
@@ -32,13 +36,13 @@ function App() {
         id="amount"
         value={amount}
         onChange={handleChange}
-        className="my-2 mx-16 rounded-full border px-2 text-center"
+        className="my-2 mx-auto justify-center rounded-full border py-1 px-2 text-center"
         aria-label="amount"
       />
       <button
         type="button"
         onClick={handleClick}
-        className="center mx-auto max-w-fit content-center items-center justify-center rounded-full bg-pink-400 px-2 text-center font-medium text-white"
+        className="center mx-auto max-w-fit content-center items-center justify-center rounded-full bg-pink-400 px-4 py-2 text-center font-bold text-white"
       >
         Send
       </button>
