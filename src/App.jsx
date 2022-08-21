@@ -25,7 +25,7 @@ function App() {
       <h1>Welcome to PalPay!</h1>
 
       <h2>Your balance is:</h2>
-      <strong>£{balance}</strong>
+      <strong aria-label="balance">£{balance}</strong>
 
       <h3>How much would you like to transfer?</h3>
       <input
@@ -33,6 +33,7 @@ function App() {
         value={amount}
         onChange={handleChange}
         className="my-2 mx-16 rounded-full border px-2 text-center"
+        aria-label="amount"
       />
       <button
         type="button"
@@ -41,7 +42,9 @@ function App() {
       >
         Send
       </button>
-      <p className="pt-2">{msg}</p>
+      <p className="pt-2" aria-label="message">
+        {msg}
+      </p>
     </div>
   );
 }

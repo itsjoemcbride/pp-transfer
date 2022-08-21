@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="balance-box"
+>
+  <img
+    alt="PalPay Logo"
+    className="h-24"
+    src="PalPay.png"
+  />
+  <h1>
+    Welcome to PalPay!
+  </h1>
+  <h2>
+    Your balance is:
+  </h2>
+  <strong
+    aria-label="balance"
+  >
+    £
+    100
+  </strong>
+  <h3>
+    How much would you like to transfer?
+  </h3>
+  <input
+    aria-label="amount"
+    className="my-2 mx-16 rounded-full border px-2 text-center"
+    id="amount"
+    onChange={[Function]}
+    value=""
+  />
+  <button
+    className="center mx-auto max-w-fit content-center items-center justify-center rounded-full bg-pink-400 px-2 text-center font-medium text-white"
+    onClick={[Function]}
+    type="button"
+  >
+    Send
+  </button>
+  <p
+    aria-label="message"
+    className="pt-2"
+  />
+</div>
+`;
