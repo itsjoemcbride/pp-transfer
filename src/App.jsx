@@ -8,12 +8,12 @@ function App() {
   const [msg, setMsg] = useState("");
   const handleChange = (event) => setAmount(event.target.value);
   const handleClick = () => {
-    if (balance >= amount && typeof amount === "number" && amount > 0) {
+    if (balance >= amount && amount > 0) {
       setMsg(`£${amount} transferred successfully`);
       setBalance(balance - amount);
     } else {
       setMsg(
-        `Insufficient balance: you do not have ${amount} available to transfer`
+        `Insufficient balance: you do not have £${amount} available to transfer`
       );
     }
     setAmount("");
@@ -41,7 +41,7 @@ function App() {
       >
         Send
       </button>
-      <p>{msg}</p>
+      <p className="pt-2">{msg}</p>
     </div>
   );
 }
