@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import PalPayLogo from "./images/PalPay.png";
 
 function App() {
   const [amount, setAmount] = useState("");
@@ -19,17 +20,29 @@ function App() {
   };
 
   return (
-    <>
+    <div className="balance-box">
+      <img className="h-24" src={PalPayLogo} alt="PalPay Logo" />
       <h1>Welcome to PalPay!</h1>
+
       <h2>Your balance is:</h2>
       <strong>£{balance}</strong>
+
       <h3>How much would you like to transfer?</h3>
-      <input id="amount" value={amount} onChange={handleChange} />
-      <button type="button" onClick={handleClick}>
+      <input
+        id="amount"
+        value={amount}
+        onChange={handleChange}
+        className="my-2 mx-16 rounded-full border px-2 text-center"
+      />
+      <button
+        type="button"
+        onClick={handleClick}
+        className="center mx-auto max-w-fit content-center items-center justify-center rounded-full bg-pink-400 px-2 text-center font-medium text-white"
+      >
         Send
       </button>
       <p>{msg}</p>
-    </>
+    </div>
   );
 }
 
