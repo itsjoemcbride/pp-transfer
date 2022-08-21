@@ -1,22 +1,20 @@
 import { useState } from "react";
 import "./App.css";
 
-function outputMsg(transfer, balance) {
-  if (transfer <= balance) {
-    setBalance(balance - transfer);
-    return `£${transfer} transferred successfully`;
-  }
-  return `You do not have £${transfer} to transfer`;
-}
-
 function App() {
   const [amount, setAmount] = useState("");
-  const [transfer, setTransfer] = useState("");
   const [balance, setBalance] = useState(100);
-
+  const [msg, setMsg] = useState("");
   const handleChange = (event) => setAmount(event.target.value);
   const handleClick = () => {
-    setTransfer(amount);
+    if (balance >= amount && typeof amount === "number" && amount > 0) {
+      setMsg(`£${amount} transferred successfully`);
+      setBalance(balance - amount);
+    } else {
+      setMsg(
+        `Insufficient balance: you do not have ${amount} available to transfer`
+      );
+    }
     setAmount("");
   };
 
@@ -30,7 +28,7 @@ function App() {
       <button type="button" onClick={handleClick}>
         Send
       </button>
-      <p>{outputMsg(transfer, balance)}</p>
+      <p>{msg}</p>
     </>
   );
 }
