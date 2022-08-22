@@ -19,6 +19,10 @@ function App() {
     setAmount("");
   };
 
+  const handleFocus = () => {
+    setMsg("");
+  };
+
   return (
     <div className="balance-box">
       <img
@@ -38,6 +42,7 @@ function App() {
         onChange={handleChange}
         className="my-2 mx-auto justify-center rounded-full border py-1 px-2 text-center"
         aria-label="amount"
+        onFocus={handleFocus}
       />
       <button
         type="button"

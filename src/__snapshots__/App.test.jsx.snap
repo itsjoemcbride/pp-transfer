@@ -29,6 +29,7 @@ exports[`renders without crashing 1`] = `
     className="my-2 mx-auto justify-center rounded-full border py-1 px-2 text-center"
     id="amount"
     onChange={[Function]}
+    onFocus={[Function]}
     value=""
   />
   <button
