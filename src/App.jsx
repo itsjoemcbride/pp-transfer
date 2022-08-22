@@ -42,7 +42,7 @@ function App() {
       <button
         type="button"
         onClick={handleClick}
-        className="center mx-auto max-w-fit content-center items-center justify-center rounded-full bg-pink-400 px-4 py-2 text-center font-bold text-white"
+        className="center mx-auto max-w-fit content-center items-center justify-center rounded-full bg-pink-400 px-4 py-2 text-center font-bold text-white hover:bg-pink-600"
       >
         Send
       </button>
