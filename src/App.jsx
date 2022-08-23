@@ -1,8 +1,19 @@
+import { useEffect, useState } from "react";
+import apiService from "./api";
 import "./App.css";
-import { useState } from "react";
 import Form from "./Components/Form/Form";
 
 function App() {
+  useEffect(() => {
+    apiService
+      .getAllUsers()
+      .then((users) => {
+        console.log(users);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
   const [amount, setAmount] = useState("");
   const [balance, setBalance] = useState(100);
   const [msg, setMsg] = useState("");
